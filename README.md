@@ -20,8 +20,8 @@ Features: user creation, expense CRUD, filtering, pagination, date-range filter,
    ```
 4. Run:
    ```bash
-   npm run dev   # development (nodemon)
-   npm start     # production
+   npm run dev   
+   npm start     
    ```
 
 ## Project structure
@@ -98,9 +98,3 @@ All errors look like `{ "success": false, "message": "Error description" }`.
 
 Import `postman_collection.json` and set the `baseUrl` variable (local or deployed URL). `userId` and `expenseId` are saved automatically after the create requests.
 
-## Deployment (Render + MongoDB Atlas)
-
-1. Create a free MongoDB Atlas cluster, add a DB user, and allow network access `0.0.0.0/0`.
-2. Push this repo to GitHub.
-3. On Render create a **Web Service** from the repo: Build `npm install`, Start `npm start`.
-4. Add env var `MONGO_URI` (Atlas connection string). Render sets `PORT` itself.
